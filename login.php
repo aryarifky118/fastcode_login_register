@@ -24,11 +24,14 @@ if (isset($_POST["login"])) {
             exit;
         }else {
             echo "<script>
-                    alert('Username atau Password Salah');
+                    alert('Password Salah');
                   </script>";
         }
+    }else {
+        echo "<script>
+                alert('Username Tidak Terdaftar');
+              </script>";
     }
-    $error = true;
 }
 ?>
 
@@ -45,11 +48,11 @@ if (isset($_POST["login"])) {
         <h4>Sign-In</h4>
         <div class="form-group-login">
             <label for="username">Username</label><br>
-            <input type="text" name="username" id="username" class="form-control-login" placeholder="Masukkan Username">
+            <input type="text" name="username" id="username" class="form-control-login" placeholder="Masukkan Username" required>
         </div>
         <div class="form-group-login">
             <label for="InputPassword">Password</label><br>
-            <input type="password" name="password" id="InputPassword" class="form-control-login" placeholder="Masukkan Password">
+            <input type="password" name="password" id="InputPassword" class="form-control-login" placeholder="Masukkan Password" required>
         </div>
         <button type="submit" name="login">Sign In</button>
         <div>
